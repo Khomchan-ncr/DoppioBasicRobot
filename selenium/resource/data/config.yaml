@@ -1,0 +1,14 @@
+env: uat  #uat / sit
+
+url:
+  uat: https://training-platform.doppio-tech.com
+  sit: https://doppee.doppio-tech.com/
+
+browser:
+  safari: safari
+  chrome: gc
+  firefox: ff
+
+
+
+

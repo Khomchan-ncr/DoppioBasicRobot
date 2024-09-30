@@ -1,0 +1,15 @@
+user:
+  name: kimtest
+  surname: testkim
+  phone: '0611233456'
+
+product: 
+  phone: Coppee phone 1
+
+address:
+  shipping_address: 99/151 sukhumvit jubjub 19199
+
+credit:
+  number: '4111111111111111'
+  exp: '06/2025'
+  cvc: 887

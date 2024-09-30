@@ -1,0 +1,17 @@
+*** Variables ***
+### Payment Page ###
+${payment_page_address_name_field}            //input[@placeholder="Name"]
+${payment_page_address_surname_field}         //input[@placeholder="Surname"]
+${payment_page_address_shipping_field}        //input[@placeholder="Shipping address"]
+${payment_page_address_phone_field}           //input[@placeholder="Phone number"]
+${payment_page_pay_button}                    //span[text()="PAY"]
+${payment_page_credit_type}                   //span[text()="Credit Card"]
+${payment_page_qr_code_type}                  //span[text()="QR Code"]
+${payment_page_next_button}                   //span[text()="Next"]
+${payment_page_card_number_field}             //input[@placeholder="Valid Card Number"]
+${payment_page_expiration_date_field}         //input[@placeholder="MM/YYYY"]
+${payment_page_cv_code_field}                 //input[@placeholder="CVC"]
+${payment_page_card_holder_field}             //input[@placeholder="Card Owner Name"]
+${payment_page_confirm_payment_button}        //span[text()="Confirm Payment"]
+${payment_page_order_success_msg}             //div[text()='Payment successfully']
+${payment_page_order_success_page}            //div[text()=' Payment Complete ']
