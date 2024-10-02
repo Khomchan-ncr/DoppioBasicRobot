@@ -1,0 +1,26 @@
+env: uat  #uat / sit
+platform: android # android / ios
+
+urlHost: http://127.0.0.1:4723
+
+android:
+  deviceName: emulator-5554
+  platformVersion: "12"
+  platformName: Android
+  automationName: UiAutomator2
+  appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+  appPackage:  com.saucelabs.mydemoapp.android
+
+ios:
+  deviceName: iPhone 16
+  platformVersion: "18.0"
+  platformName: ios
+  automationName: XCUITest
+  udid: 958AF1E5-270D-43A5-B842-7BDAAAAD7F3C
+  app: /Users/khomchan.n/DoppioBasicRobot-main/appium/resource/Payload/My-Demo-App.app
+
+
+
+appium_server:  appium
+appium_port: "4723"
+

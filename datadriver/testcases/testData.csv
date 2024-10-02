@@ -1,0 +1,3 @@
+﻿*** Test Cases ***,[tags],${username},${password},${expect_message}
+Test 1 Login success,tag1,jummum@gmail.com,Test@1234,Login successfully
+Test 2 Login failed,tag2,jummum@gmail.com,Test@4321,Login Failed
