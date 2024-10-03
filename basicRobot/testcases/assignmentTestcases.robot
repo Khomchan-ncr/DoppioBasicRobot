@@ -75,7 +75,7 @@ AM-15 Ignore Error And Return Status
 
     # Attempt to input text into an invalid locator and ignore any errors
     ${result}=    Run Keyword And Ignore Error    Input Text    invalid_locator    value
-    Log To Console    \nIgnored the error and continued
+    Log To Console    \nIgnored the error and continued:${result}
 
 AM-16 Recursive Keyword
     ${result}=    Calculate Factorial    ${5}
