@@ -2,12 +2,13 @@
 Resource    ../keywords/importFile.robot
 Library    DataDriver    file=testData.csv    dialect=excel
 Test Template    Login Scenario
+
 Test Teardown    Close Browser
 *** Keywords ***
 
 Login Scenario
     [Arguments]    ${username}    ${password}    ${expect_message}
-    SeleniumLibrary.Open Browser    ${url}    ${browser.chrome}
+    SeleniumLibrary.Open Browser    ${url}    ${browser.chrome}    options=add_argument("--headless")
     Maximize Browser Window
     ## tap manage account
     SeleniumLibrary.Wait Until Page Contains Element    ${main_page_user_manage_button}    timeout=${GLOBAL_TIMOUT}
@@ -21,6 +22,7 @@ Login Scenario
     SeleniumLibrary.Wait Until Page Contains Element    //div[@class="ant-modal-confirm-content"]
     SeleniumLibrary.Page Should Contain Element    //div[@class="ant-modal-confirm-content"]
     Element Text Should Be    //div[@class="ant-modal-confirm-content"]    ${expect_message}
-    Log To Console    @{TEST_NAME}${TEST_TAGS}
+    Log To Console    ${TESTNAME}${TEST_TAGS}
 *** Test Cases ***
 TEST
+

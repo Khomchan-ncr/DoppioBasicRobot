@@ -1,3 +1,8 @@
 ﻿*** Test Cases ***,[tags],${username},${password},${expect_message}
 Test 1 Login success,tag1,jummum@gmail.com,Test@1234,Login successfully
-Test 2 Login failed,tag2,jummum@gmail.com,Test@4321,Login Failed
+Test 2 Login failed when password incorrect,tag2,jummum@gmail.com,Test@4321,Login Failed
+Test 3 Login failed when password incorrect format,tag3,jummum@gmail.com,@--**,Login Failed
+Test 4 Login failed when password invalid password,tag4,jummum@gmail.com,'',Login Failed
+Test 5 Login failed when username incorrect,tag5,jummum@gmail.xyz,Test@1234,Login Failed
+Test 6 Login failed when username incorrect format,tag6,jummum,Test@1234,Login Failed
+Test 7 Login failed when username invalid,tag7,'',Test@1234,Login Failed
