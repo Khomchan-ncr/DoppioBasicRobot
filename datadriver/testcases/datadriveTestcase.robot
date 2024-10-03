@@ -2,7 +2,6 @@
 Resource    ../keywords/importFile.robot
 Library    DataDriver    file=testData.csv    dialect=excel
 Test Template    Login Scenario
-
 Test Teardown    Close Browser
 *** Keywords ***
 
@@ -21,8 +20,11 @@ Login Scenario
     SeleniumLibrary.Click Element    ${login_page_login_button} 
     SeleniumLibrary.Wait Until Page Contains Element    //div[@class="ant-modal-confirm-content"]
     SeleniumLibrary.Page Should Contain Element    //div[@class="ant-modal-confirm-content"]
+    Sleep    0.3s
     Element Text Should Be    //div[@class="ant-modal-confirm-content"]    ${expect_message}
-    Log To Console    ${TESTNAME}${TEST_TAGS}
-*** Test Cases ***
-TEST
+    # Log To Console    \n${DataDriver_DATA_DICT}[${TESTNAME}]
+
+*** Test cases ***
+TEST 01
+
 
