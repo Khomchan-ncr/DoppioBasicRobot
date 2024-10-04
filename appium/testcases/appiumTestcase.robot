@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../keywords/importFile.robot
+Resource    ../keywords/common/importFile.robot
 Suite Setup    commonKeyword.Start Appium Server
-Suite Teardown    Run Keywords    appiumLibrary.Close Application    AND    commonKeyword.Stop Appium Server
+Suite Teardown    Run Keywords    AppiumLibrary.Close Application    AND    commonKeyword.Stop Appium Server
 *** Test Cases ***
 TC-01 Open demo application
     commonKeyword.Open demo application

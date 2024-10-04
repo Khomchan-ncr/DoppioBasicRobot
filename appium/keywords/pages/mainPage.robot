@@ -1,10 +1,10 @@
 *** Keywords ***
 
-Tap Product In List
+Tap product in list
     [Arguments]    ${locator}
-    Wait Until Show On Display    ${locator}    ${GLOBAL_TIMEOUT}
-    Swipe Until Page Contain Element    ${locator}
-    Click element When Element Show On Display    ${locator}
+    Wait until show on display    ${locator}    ${GLOBAL_TIMEOUT}
+    Swipe until page contain element    ${locator}
+    Click element when element show on display    ${locator}
 
 Tap cart icon in main page
-    Click element When Element Show On Display    ${main_page_cart_icon}
+    Click element when element show on display    ${main_page_cart_icon}
