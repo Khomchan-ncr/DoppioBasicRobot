@@ -1,5 +1,5 @@
 env: uat  #uat / sit
-platform: android # android / ios
+platform: ios # android / ios
 
 urlHost: http://127.0.0.1:4723
 

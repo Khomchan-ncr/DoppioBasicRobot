@@ -1,21 +1,20 @@
 *** Settings ***
 Resource    ../keywords/importFile.robot
-Suite Setup    Start Appium Server
-Suite Teardown    Stop Appium Server
+Suite Setup    commonKeyword.Start Appium Server
+Suite Teardown    Run Keywords    appiumLibrary.Close Application    AND    commonKeyword.Stop Appium Server
 *** Test Cases ***
-TC-01 Open Demo Application
-    Open Demo Application
+TC-01 Open demo application
+    commonKeyword.Open demo application
 
-TC-02 Click On Product "Sauce Labs Backpack"
-    Tap Product In List Product Main Page    ${product.backpack}
+TC-02 Click on product "Sauce Labs Backpack"
+    mainFeature.Tap product in list product main page    ${product.backpack}
     
-TC-03 Add Product To Cart
-    ${price}=    Tap Add To Cart In Product
-    Set Suite Variable    ${price_product}    ${price}
-    Log To Console    \n::${price_product}
+TC-03 Add product to cart
+    ${price}=    productFeature.Tap add to cart and get price in product
+    Set suite variable    ${price_product}    ${price}
 
-TC-04 Click On Cart Icon
-    Tap Cart Icon In Main Page
+TC-04 Click on cart icon
+    mainPage.Tap cart icon in main page
 
-TC-05 Verify That In Cart Has Only One Product
-    Verify That In Cart    ${price_product}    ${product.backpack}
+TC-05 Verify that in cart has only one product
+    cartFeature.Verify product that in cart    ${price_product}    ${product.backpack}
